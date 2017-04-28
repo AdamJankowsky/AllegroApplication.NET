@@ -10,6 +10,8 @@ namespace AllegroWebAplication.App_Start
 
     using Ninject;
     using Ninject.Web.Common;
+    using AllegroWebAplication.Providers.Interfaces;
+    using AllegroWebAplication.Providers;
 
     public static class NinjectWebCommon 
     {
@@ -61,6 +63,7 @@ namespace AllegroWebAplication.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
+            kernel.Bind<ITest>().To<Test>();
         }        
     }
 }
