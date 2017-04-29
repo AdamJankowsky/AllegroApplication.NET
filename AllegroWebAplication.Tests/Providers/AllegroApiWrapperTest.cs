@@ -34,9 +34,7 @@ namespace AllegroWebAplication.Tests.Providers
             AllegroApiWrapper allegroApiWrapper = new AllegroApiWrapper(allegroServiceClient);
             allegroApiWrapper.GetLocalVersionKey();
             allegroApiWrapper.DoLogin();
-
             var r = allegroApiWrapper.GetMySellItems();
-
             Assert.IsNotNull(r);
         }
     }

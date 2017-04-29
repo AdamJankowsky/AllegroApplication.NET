@@ -65,6 +65,7 @@ namespace AllegroWebAplication.App_Start
         private static void RegisterServices(IKernel kernel)
         {
             kernel.Bind<servicePortClient>().ToSelf();
+            kernel.Bind<IAllegroApiWrapper>().To<AllegroApiWrapper>();
         }        
     }
 }

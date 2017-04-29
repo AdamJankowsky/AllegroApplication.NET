@@ -19,6 +19,8 @@ namespace AllegroWebAplication.Providers
         public AllegroApiWrapper(servicePortClient _sPC)
         {
             serviceClient = _sPC;
+            GetLocalVersionKey();
+            DoLogin();
         }
 
         public string DoLogin() //returns sessionhandler string and stores it in private field
