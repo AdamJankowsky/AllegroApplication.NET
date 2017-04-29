@@ -25,6 +25,6 @@ namespace AllegroWebAplication.AllegroModels
     public class Buyer
     {
         public int UserId { get; set; }
-        public int UserLogin { get; set; }
+        public string UserLogin { get; set; }
     }
 }
