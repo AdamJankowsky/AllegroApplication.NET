@@ -1,0 +1,35 @@
+﻿@model AllegroWebAplication.AllegroModels.AllegroSellItems
+
+@{
+    ViewBag.Title = "Sprzedawane przedmioty";
+}
+
+<h2>Sprzedawane przedmioty</h2>
+
+<hr />
+
+<table class="table table-striped table-hover ">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Tytuł</th>
+            <th>Cena</th>
+            <th>Ile pozostału</th>
+            <th>Wyświetlenia</th>
+            <th>Do końca aukcji</th>
+        </tr>
+    </thead>
+    @foreach (var item in Model.sellItemsList)
+    {
+        <thead>
+            <tr>
+                <th>@item.itemId</th>
+                <th>@item.itemTitle</th>
+                <th>@item.itemPrice zł</th>
+                <th>@item.itemsLeft</th>
+                <th>@item.itemViews</th>
+                <th>@item.itemEndTimeLeft</th>
+            </tr>
+        </thead>
+    }
+</table>
