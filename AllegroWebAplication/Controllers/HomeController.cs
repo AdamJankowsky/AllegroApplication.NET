@@ -9,9 +9,9 @@ namespace AllegroWebAplication.Controllers
 {
     public class HomeController : Controller
     {
+
         public HomeController()
         {
-
         }
         public ActionResult Index()
         {
@@ -20,7 +20,7 @@ namespace AllegroWebAplication.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = test.hello();
+            ViewBag.Message = "Message";
 
             return View();
         }
@@ -28,7 +28,6 @@ namespace AllegroWebAplication.Controllers
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
-
             return View();
         }
     }
