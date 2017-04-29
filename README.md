@@ -5,4 +5,4 @@ Prosta aplikacja korzystająca z API Allegro, początkowo miał to być menedże
 
 Na początek aplikacja będzie łączyć się po API z Allegro pobierać kupione przedmioty etc. Spróbuję zrobić moduł wysyłający automatycznie maila z "kluczem" jeśli zostanie przekazana wpłata.
 
-Aby odpalić aplikację należy podać swoje dane w pliku Global.cs (klucz api, użytkownika i hasło).
+Aby uruchomić aplikację należy podać swoje dane w pliku Global.cs (klucz api, użytkownika i hasło).
