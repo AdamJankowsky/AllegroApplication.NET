@@ -71,7 +71,7 @@ namespace AllegroWebAplication.Providers
                     ItemId = item.itemId,
                     ItemTitle = item.itemTitle,
                     ItemPrice = Convert.ToDecimal(item.itemPrice[0].priceValue),
-                    ItemQuantity = item.itemStartQuantity - item.itemSoldQuantity,
+                    ItemQuantity = item.itemSoldQuantity,
                     ThumbNailUrl = item.itemThumbnailUrl,
                     ItemBuyer = new Buyer()
                     {

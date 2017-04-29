@@ -19,7 +19,6 @@
     </thead>
     @foreach (var item in Model.SoldItems)
     {
-        <thead>
             <tr>
                 <th>@item.ItemId</th>
                 <th>@item.ItemTitle</th>
@@ -27,6 +26,5 @@
                 <th>@item.ItemQuantity</th>
                 <th>@item.ItemBuyer.UserLogin</th>
             </tr>
-        </thead>
     }
 </table>
