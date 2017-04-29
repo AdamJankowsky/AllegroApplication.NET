@@ -201,6 +201,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AllegroModels\AllegroSellItems.cs" />
+    <Compile Include="AllegroModels\AllegroSoldItems.cs" />
+    <Compile Include="AllegroModels\AllegroWonItems.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
@@ -223,6 +226,8 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\AllegroApiWrapper.cs" />
+    <Compile Include="Providers\Interfaces\IAllegroApiWrapper.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -936,7 +941,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Providers\Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config">
