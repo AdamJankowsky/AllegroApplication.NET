@@ -7,7 +7,7 @@ using AllegroWebAplication.AllegroModels;
 
 namespace AllegroWebAplication.Providers.Interfaces
 {
-    interface IAllegroApiWrapper
+    public interface IAllegroApiWrapper
     {
         string DoLogin();
         long GetLocalVersionKey();
