@@ -211,7 +211,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\KeyManagerController.cs" />
-    <Compile Include="KeySenderModels\KeyFactoryModel.cs" />
+    <Compile Include="KeySenderModels\KeyManagerModel.cs" />
     <Compile Include="Connected Services\AllegroApiService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -229,21 +229,13 @@
     <Compile Include="Migrations\201704301911451_First Migration.Designer.cs">
       <DependentUpon>201704301911451_First Migration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201704301943215_KeyFactoryMigration.cs" />
-    <Compile Include="Migrations\201704301943215_KeyFactoryMigration.Designer.cs">
-      <DependentUpon>201704301943215_KeyFactoryMigration.cs</DependentUpon>
+    <Compile Include="Migrations\201705011735255_Second Migration.cs" />
+    <Compile Include="Migrations\201705011735255_Second Migration.Designer.cs">
+      <DependentUpon>201705011735255_Second Migration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201705010939307_AddedFactoryNameProperty.cs" />
-    <Compile Include="Migrations\201705010939307_AddedFactoryNameProperty.Designer.cs">
-      <DependentUpon>201705010939307_AddedFactoryNameProperty.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705011245327_Changed Name of KeyFactory class.cs" />
-    <Compile Include="Migrations\201705011245327_Changed Name of KeyFactory class.Designer.cs">
-      <DependentUpon>201705011245327_Changed Name of KeyFactory class.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705011348445_deleted used filed from Key class.cs" />
-    <Compile Include="Migrations\201705011348445_deleted used filed from Key class.Designer.cs">
-      <DependentUpon>201705011348445_deleted used filed from Key class.cs</DependentUpon>
+    <Compile Include="Migrations\201705012003444_Mig.cs" />
+    <Compile Include="Migrations\201705012003444_Mig.Designer.cs">
+      <DependentUpon>201705012003444_Mig.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -253,6 +245,9 @@
     <Compile Include="Providers\AllegroApiWrapper.cs" />
     <Compile Include="Providers\Interfaces\IAllegroApiWrapper.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\AddingMultipleKeysViewModel.cs" />
+    <Compile Include="ViewModels\KeyManagerAddOrUpdateViewModel.cs" />
+    <Compile Include="ViewModels\KeyManagerViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Connected Services\AllegroApiService\AllegroWebAplication.AllegroApiService.AddressInfoStruct.datasource">
@@ -967,6 +962,10 @@
     <Content Include="Views\Allegro\ListSellingItems.cshtml" />
     <Content Include="Views\Allegro\ListListSoldItems.cshtml" />
     <Content Include="Views\KeyManager\GetKeyManagers.cshtml" />
+    <Content Include="Views\KeyManager\AddOrUpdate.cshtml" />
+    <Content Include="Views\KeyManager\Index.cshtml" />
+    <Content Include="Views\KeyManager\ManageKeys.cshtml" />
+    <Content Include="Views\KeyManager\AddKeysForManager.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -992,17 +991,11 @@
     <EmbeddedResource Include="Migrations\201704301911451_First Migration.resx">
       <DependentUpon>201704301911451_First Migration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201704301943215_KeyFactoryMigration.resx">
-      <DependentUpon>201704301943215_KeyFactoryMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201705011735255_Second Migration.resx">
+      <DependentUpon>201705011735255_Second Migration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705010939307_AddedFactoryNameProperty.resx">
-      <DependentUpon>201705010939307_AddedFactoryNameProperty.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705011245327_Changed Name of KeyFactory class.resx">
-      <DependentUpon>201705011245327_Changed Name of KeyFactory class.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705011348445_deleted used filed from Key class.resx">
-      <DependentUpon>201705011348445_deleted used filed from Key class.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201705012003444_Mig.resx">
+      <DependentUpon>201705012003444_Mig.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
