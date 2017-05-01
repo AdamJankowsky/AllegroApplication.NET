@@ -36,7 +36,7 @@ namespace AllegroWebAplication.Models
             return new ApplicationDbContext();
         }
 
-        public DbSet<KeyFactoryModel> KeysManagers { get; set; }
+        public DbSet<KeyManagerModel> KeysManagers { get; set; }
         public DbSet<Key> Keys { get; set; }
 
 
