@@ -1,0 +1,30 @@
+﻿@model IEnumerable<AllegroWebAplication.ViewModels.KeyManagerViewModel>
+
+@{
+    ViewBag.Title = "Menedżer kluczy";
+}
+
+<h2>Menedżer kluczy</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<hr />
+<table class="table table-striped table-hover ">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Nazwa menadżera</th>
+            <th>Edytuj</th>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.FactoryName</td>
+            <td>@Html.ActionLink("Edycja", "AddOrUpdate", "KeyManager", new { id = item.Id },null) </td>
+        </tr>
+    }
+</table>
