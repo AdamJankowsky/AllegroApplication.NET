@@ -6,13 +6,10 @@ using System.Web;
 
 namespace AllegroWebAplication.KeySenderModels
 {
-    public class KeyStruct
+    public class KeyFactoryModel
     {
-        public KeyStruct()
-        {
-
-        }
         public int Id { get; set; }
+        public string FactoryName { get; set; }
         public List<Auction> AuctionIDs { get; set; } //Id aukcji danego klucza
         public List<Key> Keys { get; set; }
     }
@@ -25,11 +22,6 @@ namespace AllegroWebAplication.KeySenderModels
 
     public class Key
     {
-        public Key()
-        {
-
-        }
-
         public int Id { get; set; }
         public string Value { get; set; }
         public bool Used { get; set; }

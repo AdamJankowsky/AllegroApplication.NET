@@ -210,7 +210,8 @@
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="KeySenderModels\KeyFactory.cs" />
+    <Compile Include="Controllers\KeyManagerController.cs" />
+    <Compile Include="KeySenderModels\KeyFactoryModel.cs" />
     <Compile Include="Connected Services\AllegroApiService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -231,6 +232,14 @@
     <Compile Include="Migrations\201704301943215_KeyFactoryMigration.cs" />
     <Compile Include="Migrations\201704301943215_KeyFactoryMigration.Designer.cs">
       <DependentUpon>201704301943215_KeyFactoryMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705010939307_AddedFactoryNameProperty.cs" />
+    <Compile Include="Migrations\201705010939307_AddedFactoryNameProperty.Designer.cs">
+      <DependentUpon>201705010939307_AddedFactoryNameProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705011245327_Changed Name of KeyFactory class.cs" />
+    <Compile Include="Migrations\201705011245327_Changed Name of KeyFactory class.Designer.cs">
+      <DependentUpon>201705011245327_Changed Name of KeyFactory class.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -953,10 +962,10 @@
     <Content Include="Views\Allegro\ListBoughtItems.cshtml" />
     <Content Include="Views\Allegro\ListSellingItems.cshtml" />
     <Content Include="Views\Allegro\ListListSoldItems.cshtml" />
+    <Content Include="Views\KeyManager\GetKeyManagers.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\KeyManager\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config">
@@ -981,6 +990,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201704301943215_KeyFactoryMigration.resx">
       <DependentUpon>201704301943215_KeyFactoryMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705010939307_AddedFactoryNameProperty.resx">
+      <DependentUpon>201705010939307_AddedFactoryNameProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705011245327_Changed Name of KeyFactory class.resx">
+      <DependentUpon>201705011245327_Changed Name of KeyFactory class.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
