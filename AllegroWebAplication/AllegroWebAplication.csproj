@@ -241,6 +241,10 @@
     <Compile Include="Migrations\201705011245327_Changed Name of KeyFactory class.Designer.cs">
       <DependentUpon>201705011245327_Changed Name of KeyFactory class.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705011348445_deleted used filed from Key class.cs" />
+    <Compile Include="Migrations\201705011348445_deleted used filed from Key class.Designer.cs">
+      <DependentUpon>201705011348445_deleted used filed from Key class.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -996,6 +1000,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705011245327_Changed Name of KeyFactory class.resx">
       <DependentUpon>201705011245327_Changed Name of KeyFactory class.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705011348445_deleted used filed from Key class.resx">
+      <DependentUpon>201705011348445_deleted used filed from Key class.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

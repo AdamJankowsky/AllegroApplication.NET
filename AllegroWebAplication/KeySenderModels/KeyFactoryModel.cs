@@ -24,7 +24,6 @@ namespace AllegroWebAplication.KeySenderModels
     {
         public int Id { get; set; }
         public string Value { get; set; }
-        public bool Used { get; set; }
     }
 
 }
