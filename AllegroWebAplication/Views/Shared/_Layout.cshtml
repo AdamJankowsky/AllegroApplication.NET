@@ -27,11 +27,12 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Allegro <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li>@Html.ActionLink("Allegro Home", "Index", "Allegro")</li>
-                            <li>@Html.ActionLink("Kupione przedmioty", "ListBoughtItems", "Allegro")</li>
-                            <li>@Html.ActionLink("Wystawione przedmioty", "ListSellingItems", "Allegro")</li>
-                            <li>@Html.ActionLink("Sprzedane przedmioty", "ListListSoldItems", "Allegro")</li>
+                            <li>@Html.ActionLink("Bought Items", "ListBoughtItems", "Allegro")</li>
+                            <li>@Html.ActionLink("Selling Items", "ListSellingItems", "Allegro")</li>
+                            <li>@Html.ActionLink("Sold Items", "ListListSoldItems", "Allegro")</li>
                         </ul>
                     </li>
+                    <li>@Html.ActionLink("Key Manager", "Index", "KeyManager")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
