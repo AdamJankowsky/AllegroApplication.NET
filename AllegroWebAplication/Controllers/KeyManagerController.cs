@@ -20,9 +20,23 @@ namespace AllegroWebAplication.Controllers
 
         public ActionResult Index()
         {
-            IEnumerable<KeyManagerModel> keyManagers;
-            keyManagers = (from r in db.KeysManagers select r);
-            return View(keyManagers);
+            List<KeyManagerViewModel> keyManagersToView = new List<KeyManagerViewModel>();
+            var keyManagers = db.KeysManagers;
+
+            foreach (var manager in keyManagers)
+            {
+
+                keyManagersToView.Add(new KeyManagerViewModel()
+                {
+                    AuctionId = manager.AuctionID,
+                    Id = manager.Id,
+                    ManagerName = manager.FactoryName,
+                    NumOfKeys = 0
+                });
+            }
+            keyManagersToView.ForEach(m => m.NumOfKeys = db.KeysManagers.Find(m.Id).Keys.Count);
+
+            return View(keyManagersToView);
         }
 
         public ActionResult AddOrUpdate(int? id)
@@ -71,6 +85,7 @@ namespace AllegroWebAplication.Controllers
                 return RedirectToAction("Index");
 
             var keys = from r in db.KeysManagers where r.Id == id select r.Keys;
+
             var keysViewModel = new List<KeyManagerKeyViewModel>();
             foreach (var key in keys)
             {
@@ -126,6 +141,19 @@ namespace AllegroWebAplication.Controllers
                 });
             }
             db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult DeleteManager(int? id)
+        {
+            if (id == null)
+                return RedirectToAction("Index");
+
+            var managerToDelete = new KeyManagerModel() { Id = id.GetValueOrDefault() };
+            db.KeysManagers.Attach(managerToDelete);
+            db.KeysManagers.Remove(managerToDelete);
+            db.SaveChanges();
+
             return RedirectToAction("Index");
         }
 
