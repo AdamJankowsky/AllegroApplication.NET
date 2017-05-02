@@ -6,14 +6,13 @@ using System.Web;
 
 namespace AllegroWebAplication.ViewModels
 {
-    public class KeyManagerViewModel : KeyManagerModel
+    public class KeyManagerViewModel 
     {
-        public new int? Id { get; set; }
-        public new List<KeyManagerKeyViewModel> Keys { get; set; }
+        public int Id { get; set; }
+        public string ManagerName { get; set; }
+        public long AuctionId { get; set; }
+        public int NumOfKeys { get; set; }
     }
 
-    public class KeyManagerKeyViewModel : Key
-    {
-        public new int? Id { get; set; }
-    }
+    
 }
