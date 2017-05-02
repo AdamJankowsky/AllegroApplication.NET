@@ -11,7 +11,7 @@ namespace AllegroWebAplication.KeySenderModels
         public int Id { get; set; }
         public string FactoryName { get; set; }
         public long AuctionID { get; set; } //Id aukcji dla danego managera
-        public IList<Key> Keys { get; set; }
+        public virtual IList<Key> Keys { get; set; }
     }
 
     public class Key
